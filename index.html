@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/30567d21a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="logo.png" alt="image" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contect</a></li>
+            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>
+            Hi, I'm
+            <span>Anurag</span>
+            <br />
+            From India
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="user.jpg" alt="image" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Recusandae et blanditiis exercitationem repellendus provident vel,
+              perspiciatis molestiae libero iusto veniam, modi aspernatur
+              corporis aliquam nam! Consequuntur fuga vero beatae explicabo?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              minima deserunt est doloribus ipsam tempora nesciunt iusto, iste
+              sunt, tenetur neque! Nisi repellat ut, maiores ex perspiciatis
+              obcaecati animi distinctio! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Voluptatibus tempore ad id, placeat asperiores
+              similique accusantium aliquid unde esse repudiandae, neque ipsum
+              laborum odit natus recusandae dolor quidem nostrum porro.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Developer</span>
+                  <br />
+                  Website Developer
+                </li>
+                <li>
+                  <span>Video Editer</span>
+                  <br />
+                  Edit videos
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience"></div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2019</span>
+                  <br />
+                  High School from City Children's Academy
+                </li>
+                <li>
+                  <span>Currently</span>
+                  <br />
+                  B.Tech.(CSE) from PTU
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- portfolio -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="work-1.png" alt="image" />
+            <div class="layer">
+              <h3>Log-in Page</h3>
+              <p>
+                The login page allows a user to gain access to an application by
+                entering their username and password or by authenticating using
+                a social media login.
+              </p>
+              <a href="SignIn-SignUp/index.html">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-2.png" alt="image" />
+            <div class="layer">
+              <h3>Tindog</h3>
+              <p>
+                Tindog is a fun site that provides dog lovers with the fastest,
+                easiest way to meet other pet parents and their dog
+                counterparts.
+              </p>
+              <a href="tindog/index.html">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-3.png" alt="image" />
+            <div class="layer">
+              <h3>Drum-kit</h3>
+              <p>Play the virtual drum kit using your computer keyboard.</p>
+              <a href="Drum Kit/index.html">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-4.png" alt="image" />
+            <div class="layer">
+              <h3>Simon-game</h3>
+              <p>
+                The Simon game is the exciting electronic game of lights and
+                sounds in which players must repeat random sequences of lights
+                by pressing the colored pads in the correct order.
+              </p>
+              <a href="Simon Game/index.html">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="btn" href="#">See More</a>
+      </div>
+    </div>
+
+    <!-- services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fas fa-code fa-3x"></i>
+            <h2>WEB Developer</h2>
+            <p>
+              Web development is the work involved in developing a website for
+              the Internet (World Wide Web) or an intranet (a private network)
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fas fa-crop-alt fa-3x"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum optio
+              sit ipsam exercitationem architecto, laudantium laboriosam nulla
+              incidunt accusantium obcaecati.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-video fa-2x"></i>
+            <h2>Video Editer</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum optio
+              sit ipsam exercitationem architecto, laudantium laboriosam nulla
+              incidunt accusantium obcaecati.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>
+              contact@gmail.com
+            </p>
+            <p>
+              <i class="fa-solid fa-square-phone"></i>
+              0123456789
+            </p>
+            <a href="https://www.linkedin.com/in/anurag-kumar-9a1bb7209/">
+              <i class="icons fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100023021406868">
+              <i class="icons fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/anurag_kumar._/">
+              <i class="icons fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/PRONoob86488848">
+              <i class="icons fa-brands fa-square-twitter"></i>
+            </a>
+            <br />
+
+            <!-- <a href="my-cv.pdf" download class="btn btn2">Download</a> -->
+          </div>
+
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input
+                class="fom"
+                type="text"
+                name="Name"
+                placeholder=" Your Name"
+                required
+              />
+              <input
+                class="fom"
+                type="email"
+                name="Email"
+                placeholder=" Your Email"
+                required
+              />
+              <textarea
+                class="fom"
+                name="Massage"
+                rows="6"
+                placeholder=" Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>
+        Copyright © Anurag. Made with
+        <i class="fa-solid fa-heart"></i>
+        by Anurag kumar
+      </p>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName('tab-links')
+      var tabcontents = document.getElementsByClassName('tab-contents')
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove('active-link')
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove('active-tab')
+        }
+        event.currentTarget.classList.add('active-link')
+        document.getElementById(tabname).classList.add('active-tab')
+      }
+    </script>
+
+    <script>
+      var sidemeu = document.getElementById('sidemenu')
+
+      function openmenu() {
+        sidemeu.style.right = '0'
+      }
+
+      function closemenu() {
+        sidemeu.style.right = '-200px'
+      }
+    </script>
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbx3IJT_diXNnTtmY34oVcj_M8l-6qYhrGAu4jYHmPP8_CZ5kX5oJy9RTVOjVJjJRVf5Vg/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      const msg = document.getElementById('msg')
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = 'Massage sent successfully'
+            setTimeout(function () {
+              msg.innerHTML = ''
+            }, 5000)
+            form.reset()
+          })
+          .catch((error) => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>

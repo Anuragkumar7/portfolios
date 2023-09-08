@@ -15,19 +15,20 @@
   <body>
     <div id="header">
       <div class="container">
-        <nav>
-          <img src="logo.png" alt="image" class="logo" />
+        <nav class="sticky-nav">
+          <!-- <img src="logo.png" alt="image" class="logo" /> -->
           <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contect</a></li>
-            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+           <div class="icons-nav"><li><a href="#home"><i class="fa-solid fa-house-chimney-user"></i></a></li></div> 
+           <div class="icons-nav"><li><a href="#about"><i class="fa-solid fa-address-card"></i></a></li></div> 
+           <div class="icons-nav"><li><a href="#portfolio"><i class="fa-solid fa-list-check"></i></a></li></div> 
+           <div class="icons-nav"><li><a href="#services"><i class="fa-solid fa-handshake-angle"></i></a></li></div> 
+           <div class="icons-nav"><li><a href="#contact"><i class="fa-solid fa-envelope"></i></a></li></div> 
+           <div class="icons-nav "> <li><a href="my-cv.pdf"><i class="fa-solid fa-download download-cv"></i></a></li></div>
+            <div class="phone-btn"><i class="fas fa-solid fa-xmark" onclick="closemenu()"></i></div>
           </ul>
-          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+          <div class="phone-btn">  <i class="fas fa-solid fa-bars" onclick="openmenu()"></i></div>
         </nav>
-        <div class="header-text">
+        <div id="home" class="header-text">
           <p>Web Developer</p>
           <h1>
             Hi, I'm
@@ -35,6 +36,8 @@
             <br />
             From India
           </h1>
+        <div class="tringle"></div>
+
         </div>
       </div>
     </div>
@@ -46,7 +49,7 @@
             <img src="user.jpg" alt="image" />
           </div>
           <div class="about-col-2">
-            <h1 class="sub-title">About me</h1>
+            <h1 class="sub-title">About me</h1> 
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Recusandae et blanditiis exercitationem repellendus provident vel,
@@ -65,6 +68,8 @@
                 Skills
               </p>
               <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
@@ -115,7 +120,7 @@
                 a social media login.
               </p>
               <a href="#">
-                <i class="fas fa-external-link-alt"></i>
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
@@ -129,7 +134,7 @@
                 counterparts.
               </p>
               <a href="#">
-                <i class="fas fa-external-link-alt"></i>
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
@@ -138,8 +143,8 @@
             <div class="layer">
               <h3>Drum-kit</h3>
               <p>Play the virtual drum kit using your computer keyboard.</p>
-              <a href="#">
-                <i class="fas fa-external-link-alt"></i>
+              <a href="https://github.com/Anuragkumar7/Drum">
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
@@ -152,8 +157,8 @@
                 sounds in which players must repeat random sequences of lights
                 by pressing the colored pads in the correct order.
               </p>
-              <a href="#">
-                <i class="fas fa-external-link-alt"></i>
+              <a href="https://github.com/Anuragkumar7/Simon-Game">
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
@@ -227,8 +232,11 @@
             <a href="https://twitter.com/PRONoob86488848">
               <i class="icons fa-brands fa-square-twitter"></i>
             </a>
-            <br />
 
+            <br />
+            <div class="cv-btn">
+            <a href="my-cv.pdf"><button download type="submit" class="btn btn2">Download CV</button></a>
+          </div>
             <!-- <a href="my-cv.pdf" download class="btn btn2">Download</a> -->
           </div>
 
@@ -269,52 +277,6 @@
       </p>
     </div>
 
-    <script>
-      var tablinks = document.getElementsByClassName('tab-links')
-      var tabcontents = document.getElementsByClassName('tab-contents')
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove('active-link')
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove('active-tab')
-        }
-        event.currentTarget.classList.add('active-link')
-        document.getElementById(tabname).classList.add('active-tab')
-      }
-    </script>
-
-    <script>
-      var sidemeu = document.getElementById('sidemenu')
-
-      function openmenu() {
-        sidemeu.style.right = '0'
-      }
-
-      function closemenu() {
-        sidemeu.style.right = '-200px'
-      }
-    </script>
-    <script>
-      const scriptURL =
-        'https://script.google.com/macros/s/AKfycbx3IJT_diXNnTtmY34oVcj_M8l-6qYhrGAu4jYHmPP8_CZ5kX5oJy9RTVOjVJjJRVf5Vg/exec'
-      const form = document.forms['submit-to-google-sheet']
-
-      const msg = document.getElementById('msg')
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = 'Massage sent successfully'
-            setTimeout(function () {
-              msg.innerHTML = ''
-            }, 5000)
-            form.reset()
-          })
-          .catch((error) => console.error('Error!', error.message))
-      })
-    </script>
+  <script src="script.js"></script>
   </body>
 </html>

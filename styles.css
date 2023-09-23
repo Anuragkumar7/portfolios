@@ -33,6 +33,15 @@ div.tringle {
   padding: 10px 10px;
 }
 
+.homeimage{
+  position: relative;
+bottom: 1000px;
+left: 800px;  
+background-color: inherit; 
+  width: 30%;
+
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -57,21 +66,6 @@ nav ul li a {
   font-size: 18px;
   position: relative;
 }
-
-/* nav ul li a::after {
-  content: " ";
-  width: 0;
-  height: 3px;
-  background: #ff004f;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-} */
-/* 
-nav ul li a:hover::after {
-  width: 100%;
-} */
 
 .header-text {
   margin: 17% 5% 0 5%;
@@ -233,6 +227,7 @@ nav ul li a:hover::after {
 }
 
 .work img {
+  height: 100%;
   width: 100%;
   border-radius: 15px;
   display: block;
@@ -355,7 +350,7 @@ nav ul li a:hover::after {
 
 form input,
 form textarea {
-  width: 100%;
+  width: 85%;
   border: 0;
   outline: none;
   background: #262626;
@@ -401,6 +396,7 @@ nav .fas {
     height: 100%;
     /* background-image: url(phone-bg.png); */
   }
+
   div.tringle {
     position: relative;
     bottom: 270px;
@@ -413,6 +409,7 @@ nav .fas {
     transform: rotate(180deg);
     margin-bottom: 0;
   }
+
   .header-text {
     margin-top: 35%;
     font-size: 16px;
@@ -426,10 +423,11 @@ nav .fas {
     display: block;
     font-size: 25px;
   }
-  div.phone-btn{
-     top: 20px;
-   
-     position: fixed ;
+
+  div.phone-btn {
+    top: 20px;
+
+    position: fixed;
   }
 
   nav ul {
@@ -489,6 +487,7 @@ nav .fas {
 
 .sticky-nav {
   position: fixed;
+  padding-top: 90px;
   top: 0;
   right: 0;
   width: 60px;
@@ -526,12 +525,14 @@ nav .fas {
   display: block;
   padding: 10px;
 }
+
 .icons-nav {
-margin-bottom: 20px;
+  margin-bottom: 20px;
   background-color: #ff004f;
   color: #fff;
   border-radius: 50%;
 }
-.cv-btn{
+
+.cv-btn {
   font-size: large;
 }

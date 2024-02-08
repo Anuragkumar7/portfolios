@@ -16,6 +16,13 @@ body {
   margin-right: 40px;
 }
 
+
+/* hidder */
+
+
+
+
+/* end hidder */
 div.tringle {
   position: relative;
   bottom: 470px;
@@ -33,11 +40,11 @@ div.tringle {
   padding: 10px 10px;
 }
 
-.homeimage{
+.homeimage {
   position: relative;
-bottom: 1000px;
-left: 800px;  
-background-color: inherit; 
+  bottom: 1000px;
+  left: 800px;
+  background-color: inherit;
   width: 30%;
 
 }

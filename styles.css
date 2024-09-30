@@ -377,6 +377,10 @@ form .btn2 {
   margin-top: 20px;
   cursor: pointer;
 }
+p i a {
+text-decoration: none;
+
+}
 
 .copyright {
   width: 102.7%;

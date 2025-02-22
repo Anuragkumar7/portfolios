@@ -285,7 +285,10 @@ nav ul li a {
 .work:hover .layer {
   height: 100%;
 }
-
+.gmail{
+  margin-left: 10px;
+  font-weight: 200;
+}
 .btn {
   display: block;
   margin: 50px auto;

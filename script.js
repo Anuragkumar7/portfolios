@@ -39,4 +39,39 @@ form.addEventListener('submit', (e) => {
     .catch((error) => console.error('Error!', error.message))
 })
 
-  
+   const textArray = [
+     "Java Full Stack Developer",
+     "MERN Stack Developer",
+     "C# .Net Developer",
+   ];
+   let textIndex = 0;
+   let charIndex = 0;
+   let isDeleting = false;
+
+   function typeEffect() {
+     const typingText = document.getElementById("typing-text");
+     const currentText = textArray[textIndex];
+
+     if (!isDeleting) {
+       typingText.innerHTML = currentText.substring(0, charIndex++) + "|";
+       if (charIndex > currentText.length) {
+         isDeleting = true;
+         setTimeout(typeEffect, 1000); 
+       } else {
+         setTimeout(typeEffect, 100);
+       }
+     } else {
+       typingText.innerHTML = currentText.substring(0, charIndex--) + "|";
+       if (charIndex < 0) {
+         isDeleting = false;
+         textIndex = (textIndex + 1) % textArray.length;
+         setTimeout(typeEffect, 500); 
+       } else {
+         setTimeout(typeEffect, 50);
+       }
+     }
+   }
+
+   document.addEventListener("DOMContentLoaded", () => {
+     typeEffect(); 
+   });

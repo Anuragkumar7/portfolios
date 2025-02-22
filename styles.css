@@ -37,6 +37,7 @@ div.tringle {
 }
 
 .container {
+  height: 100vh;
   padding: 10px 10px;
 }
 
@@ -170,7 +171,7 @@ nav ul li a {
 
 /* Services */
 #services {
-  margin-bottom: 80px;
+  margin-top: 350px;
   padding: 0 40px;
 }
 
@@ -410,7 +411,21 @@ nav .fas {
     height: 100%;
     /* background-image: url(phone-bg.png); */
   }
+#portfolio{
+  margin-top: 200px;
+}
 
+#services{
+  margin-top: 2200px;
+}
+
+#contact{
+  margin-top: 800px;
+}
+.copyright{
+  width: 100vw;
+  margin-top: 150px;
+}
   div.tringle {
     position: relative;
     bottom: 270px;
@@ -528,7 +543,7 @@ nav .fas {
 }
 
 #sidemenu li {
-
+padding: 20px;
   /* Adjust spacing between menu items */
 }
 

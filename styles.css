@@ -400,7 +400,9 @@ text-decoration: none;
 }
 
 /* --------------css for mobile------------------ */
-
+.tringle2{
+  display: none;
+}
 nav .fas {
   display: none;
 }
@@ -416,16 +418,31 @@ nav .fas {
 }
 
 #services{
-  margin-top: 2200px;
+  margin-top: 1600px;
 }
 
 #contact{
-  margin-top: 800px;
+  margin-top: 1000px;
 }
 .copyright{
   width: 100vw;
   margin-top: 150px;
 }
+.tringle{
+  display: none;
+}
+.tringle2{
+  position: relative;
+  display: block;
+  background-color: #ff004f;
+  height: 200px;
+  width: 400px;
+  /* z-index: 1; */
+  rotate: 120deg;
+ top: -250px;
+ left: -300px;
+}
+
   div.tringle {
     position: relative;
     bottom: 270px;
@@ -455,7 +472,6 @@ nav .fas {
 
   div.phone-btn {
     top: 20px;
-
     position: fixed;
   }
 

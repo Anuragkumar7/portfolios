@@ -1,77 +1,128 @@
-var tablinks = document.getElementsByClassName('tab-links')
-var tabcontents = document.getElementsByClassName('tab-contents')
-var sidemeu = document.getElementById('sidemenu')
+const nav = document.getElementById('site-nav')
+const toggle = document.querySelector('.nav-toggle')
 const msg = document.getElementById('msg')
+const year = document.getElementById('year')
+const form = document.forms['submit-to-google-sheet']
 
-function opentab(tabname) {
-  for (tablink of tablinks) {
-    tablink.classList.remove('active-link')
-  }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove('active-tab')
-  }
-  event.currentTarget.classList.add('active-link')
-  document.getElementById(tabname).classList.add('active-tab')
+if (year) {
+  year.textContent = new Date().getFullYear()
 }
 
-function openmenu() {
-  sidemeu.style.right = '0'
+toggle?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open')
+  toggle.setAttribute('aria-expanded', String(open))
+  toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
+})
+
+nav?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open')
+    toggle?.setAttribute('aria-expanded', 'false')
+  })
+})
+
+document.querySelectorAll('.tab-link').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.tab-link').forEach((item) => {
+      item.classList.remove('active')
+      item.setAttribute('aria-selected', 'false')
+    })
+    document.querySelectorAll('.tab-panel').forEach((panel) => {
+      panel.classList.remove('active')
+    })
+    button.classList.add('active')
+    button.setAttribute('aria-selected', 'true')
+    document.getElementById(button.dataset.tab)?.classList.add('active')
+  })
+})
+
+document.querySelectorAll('.filter-btn').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach((item) => {
+      item.classList.remove('active')
+    })
+    button.classList.add('active')
+    const filter = button.dataset.filter
+    document.querySelectorAll('.work-card').forEach((card) => {
+      const show = filter === 'all' || card.dataset.category === filter
+      card.style.display = show ? '' : 'none'
+    })
+  })
+})
+
+const sections = document.querySelectorAll('section[id]')
+const navLinks = document.querySelectorAll('.site-nav a[href^="#"]')
+
+const highlightNav = () => {
+  const y = window.scrollY + 120
+  sections.forEach((section) => {
+    const top = section.offsetTop
+    const bottom = top + section.offsetHeight
+    if (y >= top && y < bottom) {
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${section.id}`)
+      })
+    }
+  })
 }
 
-function closemenu() {
-  sidemeu.style.right = '-200px'
-}
+window.addEventListener('scroll', highlightNav, { passive: true })
 
 const scriptURL =
   'https://script.google.com/macros/s/AKfycbx3IJT_diXNnTtmY34oVcj_M8l-6qYhrGAu4jYHmPP8_CZ5kX5oJy9RTVOjVJjJRVf5Vg/exec'
-const form = document.forms['submit-to-google-sheet']
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
+form?.addEventListener('submit', (event) => {
+  event.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then((response) => {
-      msg.innerHTML = 'Massage sent successfully'
-      setTimeout(function () {
-        msg.innerHTML = ''
-      }, 5000)
+    .then(() => {
+      msg.textContent = 'Message sent successfully.'
       form.reset()
+      setTimeout(() => {
+        msg.textContent = ''
+      }, 5000)
     })
-    .catch((error) => console.error('Error!', error.message))
+    .catch(() => {
+      msg.textContent = 'Something went wrong. Please email me instead.'
+    })
 })
 
-   const textArray = [
-     "Java Full Stack Developer",
-     "MERN Stack Developer",
-     "C# .Net Developer",
-   ];
-   let textIndex = 0;
-   let charIndex = 0;
-   let isDeleting = false;
+const roles = [
+  'Java Full Stack Developer',
+  'MERN Stack Developer',
+  'C# .NET Developer',
+]
 
-   function typeEffect() {
-     const typingText = document.getElementById("typing-text");
-     const currentText = textArray[textIndex];
+let roleIndex = 0
+let charIndex = 0
+let deleting = false
 
-     if (!isDeleting) {
-       typingText.innerHTML = currentText.substring(0, charIndex++) + "|";
-       if (charIndex > currentText.length) {
-         isDeleting = true;
-         setTimeout(typeEffect, 1000); 
-       } else {
-         setTimeout(typeEffect, 100);
-       }
-     } else {
-       typingText.innerHTML = currentText.substring(0, charIndex--) + "|";
-       if (charIndex < 0) {
-         isDeleting = false;
-         textIndex = (textIndex + 1) % textArray.length;
-         setTimeout(typeEffect, 500); 
-       } else {
-         setTimeout(typeEffect, 50);
-       }
-     }
-   }
+const typeEffect = () => {
+  const el = document.getElementById('typing-text')
+  if (!el) return
+  const current = roles[roleIndex]
+  el.textContent = current.slice(0, charIndex) + (deleting ? '' : '|')
 
-   document.addEventListener("DOMContentLoaded", () => {
-     typeEffect(); 
-   });
+  if (!deleting && charIndex < current.length) {
+    charIndex += 1
+    setTimeout(typeEffect, 80)
+    return
+  }
+
+  if (!deleting && charIndex === current.length) {
+    deleting = true
+    setTimeout(typeEffect, 1200)
+    return
+  }
+
+  if (deleting && charIndex > 0) {
+    charIndex -= 1
+    setTimeout(typeEffect, 40)
+    return
+  }
+
+  deleting = false
+  roleIndex = (roleIndex + 1) % roles.length
+  setTimeout(typeEffect, 250)
+}
+
+document.addEventListener('DOMContentLoaded', typeEffect)

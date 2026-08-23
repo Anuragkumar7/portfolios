@@ -2,378 +2,600 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- css -->
+    <meta
+      name="description"
+      content="Anurag Kumar — Java Full Stack, MERN, and .NET developer from India. Building reliable web applications with a focus on user experience."
+    />
+    <title>Anurag Kumar | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio</title>
-    <script
-      src="https://kit.fontawesome.com/30567d21a4.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <div id="header">
-      <div class="container">
-        <nav class="sticky-nav">
-          <ul id="sidemenu">
-           <div class="icons-nav"><li><a href="#home"><i class="fa-solid fa-house-chimney-user"></i></a></li></div> 
-           <div class="icons-nav"><li><a href="#about"><i class="fa-solid fa-address-card"></i></a></li></div> 
-           <div class="icons-nav"><li><a href="#portfolio"><i class="fa-solid fa-list-check"></i></a></li></div> 
-           <div class="icons-nav"><li><a href="#services"><i class="fa-solid fa-handshake-angle"></i></a></li></div> 
-           <div class="icons-nav"><li><a href="#contact"><i class="fa-solid fa-envelope"></i></a></li></div> 
-           <div class="icons-nav "> <li><a href="Anurag kumar-Java Developer-CV.pdf"><i class="fa-solid fa-download download-cv"></i></a></li></div>
-            <div class="phone-btn"><i class="fas fa-solid fa-xmark" onclick="closemenu()"></i></div>
-          </ul>
-          <div class="phone-btn">  <i class="fas fa-solid fa-bars" onclick="openmenu()"></i></div>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="#home">AK<span>.</span></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+          <a
+            class="btn btn-small"
+            href="Anurag%20kumar-Java%20Developer-CV.pdf"
+            download
+            >Download CV</a
+          >
         </nav>
-       <div id="home" class="header-text">
-  <p id="typing-text"></p>
-  <h1>
-    Hi, I'm <span>Anurag</span>
-    <br />
-    From India
-  </h1>
-<div class="tringle2"></div>
-        <div class="tringle"></div>
-      
-        </div>
       </div>
-    </div>
-    <!-- About -->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="profile.jpg" alt="image" />
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About me</h1> 
-            <p>
-           I believe that the user's experience should always be at the forefront of web design. 
-              With a background in front-end development,I bring a blend of technical expertise 
-              and creative flair to every project. I have a strong foundation in HTML, CSS, and JavaScript, 
-              and I'm constantly exploring the latest frontend technologies to stay at the cutting edge of web development.
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Available for full-time roles</p>
+            <h1>
+              Hi, I’m <span>Anurag Kumar</span><br />
+              Full Stack Developer from India
+            </h1>
+            <p class="hero-role">
+              <span id="typing-text"></span>
             </p>
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-              <p class="tab-links" onclick="opentab('experience')">Experience</p>
-
+            <p class="lead">
+              I design and build web applications that are fast, accessible, and
+              easy to use — from React interfaces to Spring Boot, Node.js, and
+              .NET backends.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#work">View my work</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
             </div>
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Web Developer</span>
-                  <br />
-                  <p>
-                    &nbsp; ⦿ Java Full Stack Developer
-                    <br>
-                    &nbsp; ⦿ MERN Stack Developer
-                    <br>
-                    &nbsp; ⦿ C# .Net Developer
-                  </p>
-                </li>
-                <li>
-                  <span>Backend</span>
-                  <br />
-                  &nbsp; ⦿ Node.js, Express.js
-                  <br>
-                 
-                  &nbsp; ⦿ Spring Boot
-                    <br>
-                  &nbsp; ⦿ C# & .Net
-                </li>
-                <li>
-                  <span>Languages</span>
-                  <br>
-                   &nbsp; ⦿ Java
-                  <br>
-                   &nbsp; ⦿ C++
-                  <br>
+            <div class="socials">
+              <a
+                href="https://www.linkedin.com/in/anurag-kumar-9a1bb7209/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/Anuragkumar7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="mailto:anurag.kum.135@gmail.com" aria-label="Email"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-card">
+              <img src="profile.jpg" alt="Portrait of Anurag Kumar" />
+              <div class="hero-meta">
+                <strong>Anurag Kumar</strong>
+                <span>Java · MERN · .NET</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                </li>
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>A developer who starts with the user</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-photo">
+              <img src="profile.jpg" alt="Anurag Kumar" />
+            </div>
+            <div class="about-copy">
+              <p>
+                I believe the user’s experience should lead every design and
+                engineering decision. With a background in frontend development
+                and full-stack training, I combine technical depth with a
+                practical, product-minded approach.
+              </p>
+              <p>
+                I have a strong foundation in HTML, CSS, and JavaScript, and I
+                work across Java, the MERN stack, and C# .NET. I keep learning
+                current frontend and backend practices so the systems I ship stay
+                maintainable and current.
+              </p>
+
+              <div class="stat-row">
+                <div>
+                  <strong>8+</strong>
+                  <span>Shipped projects</span>
+                </div>
+                <div>
+                  <strong>3</strong>
+                  <span>Stack specializations</span>
+                </div>
+                <div>
+                  <strong>2025</strong>
+                  <span>PG-DAC, C-DAC Delhi</span>
+                </div>
+              </div>
+
+              <div class="tabs" role="tablist">
+                <button
+                  class="tab-link active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-tab="skills"
+                >
+                  Skills
+                </button>
+                <button
+                  class="tab-link"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="education"
+                >
+                  Education
+                </button>
+                <button
+                  class="tab-link"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="experience"
+                >
+                  Experience
+                </button>
+              </div>
+
+              <div class="tab-panel active" id="skills">
+                <div class="skill-groups">
+                  <div>
+                    <h3>Frontend</h3>
+                    <div class="chips">
+                      <span>HTML</span><span>CSS</span><span>JavaScript</span
+                      ><span>React.js</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3>Backend</h3>
+                    <div class="chips">
+                      <span>Java</span><span>Spring Boot</span
+                      ><span>Node.js</span><span>Express.js</span><span>C#</span
+                      ><span>.NET</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3>Data &amp; languages</h3>
+                    <div class="chips">
+                      <span>MySQL</span><span>MongoDB</span><span>C++</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel" id="education">
+                <ul class="timeline">
                   <li>
-                    <span>Database</span>
-                    <br />
-                    &nbsp; ⦿ MySQL, MongoDB
+                    <span>2024 — 2025</span>
+                    <strong>PG-DAC, C-DAC New Delhi</strong>
+                    <p>Post Graduate Diploma in Advanced Computing</p>
                   </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="experience"></div>
-            <div class="tab-contents" id="education">
-              <ul>
-                 <li>
-                  <span>2024 - 2025</span>
-                  <br />
-                   &nbsp; ⦿ PG-DAC (Post Graduate Diploma in Advanced Computing) from C-DAC, New Delhi 
-                </li>
-                <li>
-                  <span>2020 - 2024</span>
-                  <br />
-                   &nbsp; ⦿ B.Tech.(CSE) from IKGPTU (I.K. Gujral Punjab Technical University)
-                </li>
-                
-              </ul>
+                  <li>
+                    <span>2020 — 2024</span>
+                    <strong>B.Tech. Computer Science</strong>
+                    <p>I.K. Gujral Punjab Technical University (IKGPTU)</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-panel" id="experience">
+                <ul class="timeline">
+                  <li>
+                    <span>2024 — 2025</span>
+                    <strong>Full Stack Training · C-DAC New Delhi</strong>
+                    <p>
+                      Built production-style applications using Java, Spring
+                      Boot, React, Node.js, and relational/NoSQL databases
+                      through the PG-DAC program.
+                    </p>
+                  </li>
+                  <li>
+                    <span>Ongoing</span>
+                    <strong>Independent product work</strong>
+                    <p>
+                      Designed and shipped student administration, attendance,
+                      analytics, and utility apps with role-based access,
+                      REST APIs, and responsive interfaces.
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- portfolio -->
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="Student-Management-System.png" alt="image" />
-            <div class="layer">
-              <h3>Student Management System</h3>
-              <p>
-         A dynamic Student Management System enables real-time data management, role-based access, and automated student administration. </p>
-              <a href="https://github.com/Anuragkumar7/todolist">
-                <i class="fa-brands fa-github"></i>
-              </a>
-               <a href="">
-                <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="attendance_management-copy-2048x1188.png" alt="image" />
-            <div class="layer">
-              <h3>Attendance Management System</h3>
-              <p>
-               A dynamic Attendance Management System ensures real-time tracking, role-based access, and automated attendance management.
-              </p>
-              <a href="https://github.com/Anuragkumar7/todolist">
-                <i class="fa-brands fa-github"></i>
-              </a>
-               <a href="">
-                <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="5665422.jpg" alt="image" />
-            <div class="layer">
-              <h3>ToDo List</h3>
-              <p>
-                A dynamic to-do list is a digital tool that helps you manage tasks efficiently 
-                with features like real-time updates, prioritization, reminders, and collaboration.
-              </p>
-              <a href="https://github.com/Anuragkumar7/todolist">
-                <i class="fa-brands fa-github"></i>
-              </a>
-               <a href="">
-                <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="weather.jpg" alt="image" />
-            <div class="layer">
-              <h3>Weather App</h3>
-              <p>
-                A weather app provides real-time weather information 
-                and forecasts for planning and decision-making.
-              </p>
-              <a href="https://github.com/Anuragkumar7/CloudCraft">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://tubular-chimera-9f66bf.netlify.app/">
-                <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="work-3.png" alt="image" />
-            <div class="layer">
-              <h3>Drum-kit</h3>
-              <p>Play the virtual drum kit using your computer keyboard.</p>
-              <a href="https://github.com/Anuragkumar7/Drum" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://tubular-chimera-9f66bf.netlify.app/">
-                <i class="fas fa-tablet-alt"></i>
-              </a>
-              
-            </div>
-          </div>
-          <div class="work">
-            <img src="work-4.png" alt="image" />
-            <div class="layer">
-              <h3>Simon-game</h3>
-              <p>
-                The Simon game is the exciting electronic game of lights and
-                sounds in which players must repeat random sequences of lights
-                by pressing the colored pads in the correct order.
-              </p>
-              <a href="https://github.com/Anuragkumar7/Simon-Game" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://simongame07.netlify.app/">
-                <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="calculator.jpg" alt="image" />
-            <div class="layer">
-              <h3>calculator</h3>
-              <p>
-                A simple calculator with keyboard functionality lets users perform 
-                basic math operations using a keyboard interface for quick and convenient calculations.
-              </p>
-              <a href="https://github.com/Anuragkumar7/MyCalculator" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://simplecalculator7.netlify.app/">
-             <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Selected work</p>
+            <h2>Projects that show how I build</h2>
           </div>
 
-          <div class="work">
-            <img src="Spotify.png" alt="image" />
-            <div class="layer">
-              <h3>Spotify Dashboard</h3>
-              <p>
-               A dynamic Spotify Dashboard provides real-time analytics, personalized insights, and seamless music management.
-              </p>
-              <a href="https://github.com/Anuragkumar7/Spotify-web" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://web-spotify72.netlify.app/">
-             <i class="fas fa-tablet-alt"></i>
-              </a>
-            </div>
-          </div>
-          
-        </div>
-        <a class="btn" target="_blank" href="https://github.com/Anuragkumar7">See More</a>
-      </div>
-    </div>
-
-    <!-- services -->
-    <div id="services">
-      <div class="container">
-        <h1 class="sub-title">Services</h1>
-       <div class="services-list">
-  <div>
-    <i class="fas fa-code fa-3x"></i>
-    <h2>Frontend Development</h2>
-    <p>
-      Skilled in building dynamic and interactive user interfaces using <strong>React.js</strong>. 
-      Experienced in crafting responsive web applications with modern UI/UX principles. 
-      Proficient in state management, component-based architecture, and integrating RESTful APIs. 
-      Ensuring seamless user experiences with optimized performance and accessibility.
-    </p>
-    <a href="https://www.w3schools.com/whatis/whatis_frontenddev.asp" target="_blank">Learn More</a>
-  </div>
-
-  <div>
-    <i class="fas fa-server fa-3x"></i>
-    <h2>Backend Development</h2>
-    <p>
-      Experienced in developing robust and scalable server-side applications using 
-      <strong>Spring Boot, Hibernate, Node.js, Express.js, Java, and C# .NET</strong>. 
-      Proficient in working with relational databases like <strong>MySQL</strong> and NoSQL databases like <strong>MongoDB</strong>. 
-      Skilled in API development, authentication, security, and cloud-based deployments.
-    </p>
-    <a href="https://www.geeksforgeeks.org/backend-development/" target="_blank">Learn More</a>
-  </div>
-
-  <div>
-    <i class="fas fa-laptop-code fa-3x"></i>
-    <h2>Full Stack Development</h2>
-    <p>
-      Proficient in both frontend and backend development, leveraging technologies like 
-      <strong>React.js, Spring Boot, Hibernate, Node.js, Express.js, MySQL, and MongoDB</strong>. 
-      Experienced in building scalable, end-to-end web applications with a strong focus on performance, security, and usability. 
-      Passionate about creating seamless integrations between frontend and backend components for a smooth user experience.
-    </p>
-    <a href="https://www.w3schools.com/whatis/whatis_fullstack.asp" target="_blank">Learn More</a>
-  </div>
-</div>
-
-      </div>
-    </div>
-
-    <!-- Contact -->
-
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact me</h1>
-            <p>
-              <i class="fa-solid fa-paper-plane"><a class="gmail" style="font-size: 15px;" href="mailto:anurag.kum.135@gmail.com">anurag.kum.135@gmail.com</a></i>
-            </p>
-            <p>
-              <i class="fa-solid fa-square-phone"></i>
-              +918957990220
-            </p>
-            <a href="https://www.linkedin.com/in/anurag-kumar-9a1bb7209/">
-              <i class="icons fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100023021406868">
-              <i class="icons fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/anurag._.kumar._/">
-              <i class="icons fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/PRONoob86488848">
-              <i class="icons fa-brands fa-square-twitter"></i>
-            </a>
-
-            <br />
-            <div class="cv-btn">
-            <a href="Anurag kumar-Java Developer-CV.pdf"><button download type="submit" class="btn btn2">Download CV</button></a>
-          </div>
-            <!-- <a href="my-cv.pdf" download class="btn btn2">Download</a> -->
+          <div class="filters" role="tablist" aria-label="Filter projects">
+            <button class="filter-btn active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn" type="button" data-filter="fullstack">
+              Full stack
+            </button>
+            <button class="filter-btn" type="button" data-filter="frontend">
+              Frontend
+            </button>
           </div>
 
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input
-                class="fom"
-                type="text"
-                name="Name"
-                placeholder=" Your Name"
-                required
+          <div class="work-grid">
+            <article class="work-card" data-category="fullstack">
+              <img
+                src="Student-Management-System.png"
+                alt="Student Management System interface"
               />
+              <div class="work-body">
+                <p class="tag">Full stack</p>
+                <h3>Student Management System</h3>
+                <p>
+                  Real-time student administration with role-based access and
+                  automated records.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="fullstack">
+              <img
+                src="attendance_management-copy-2048x1188.png"
+                alt="Attendance Management System"
+              />
+              <div class="work-body">
+                <p class="tag">Full stack</p>
+                <h3>Attendance Management System</h3>
+                <p>
+                  Live attendance tracking, role-based permissions, and
+                  automated reporting.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="fullstack">
+              <img src="Spotify.png" alt="Spotify dashboard preview" />
+              <div class="work-body">
+                <p class="tag">Full stack</p>
+                <h3>Spotify Dashboard</h3>
+                <p>
+                  Personalized music analytics and a live dashboard for
+                  listening insights.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7/Spotify-web"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://web-spotify72.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="frontend">
+              <img src="5665422.jpg" alt="To-do list application" />
+              <div class="work-body">
+                <p class="tag">Frontend</p>
+                <h3>To-Do List</h3>
+                <p>
+                  Task management with real-time updates, priorities, and a
+                  clean daily workflow.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7/todolist"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="frontend">
+              <img src="weather.jpg" alt="Weather application" />
+              <div class="work-body">
+                <p class="tag">Frontend</p>
+                <h3>Weather App</h3>
+                <p>
+                  Live conditions and forecasts so people can plan the day with
+                  confidence.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7/CloudCraft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://tubular-chimera-9f66bf.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="frontend">
+              <img src="work-3.png" alt="Virtual drum kit" />
+              <div class="work-body">
+                <p class="tag">Frontend</p>
+                <h3>Drum Kit</h3>
+                <p>
+                  A keyboard-driven virtual kit for playing drums in the
+                  browser.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7/Drum"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="frontend">
+              <img src="work-4.png" alt="Simon memory game" />
+              <div class="work-body">
+                <p class="tag">Frontend</p>
+                <h3>Simon Game</h3>
+                <p>
+                  Classic lights-and-sounds memory game with sequenced pad
+                  challenges.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7/Simon-Game"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://simongame07.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="frontend">
+              <img src="calculator.jpg" alt="Calculator application" />
+              <div class="work-body">
+                <p class="tag">Frontend</p>
+                <h3>Calculator</h3>
+                <p>
+                  Keyboard-first calculator for fast, everyday arithmetic.
+                </p>
+                <div class="work-links">
+                  <a
+                    href="https://github.com/Anuragkumar7/MyCalculator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://simplecalculator7.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="center-action">
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/Anuragkumar7"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See more on GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">What I do</p>
+            <h2>Services</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <i class="fa-solid fa-code"></i>
+              <h3>Frontend development</h3>
+              <p>
+                Responsive React interfaces with component architecture, state
+                management, REST integration, and accessibility-minded UI.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fa-solid fa-server"></i>
+              <h3>Backend development</h3>
+              <p>
+                APIs and services with Spring Boot, Node.js, Express, Java, and
+                C# .NET — plus MySQL, MongoDB, auth, and secure deployments.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fa-solid fa-layer-group"></i>
+              <h3>Full stack delivery</h3>
+              <p>
+                End-to-end applications that connect frontend and backend
+                cleanly, with performance, security, and maintainability in
+                mind.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something useful</h2>
+            <p class="lead">
+              Open to software engineering roles and freelance collaborations.
+              Send a note and I’ll reply promptly.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:anurag.kum.135@gmail.com"
+                  >anurag.kum.135@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+918957990220">+91 89579 90220</a>
+              </li>
+            </ul>
+            <div class="socials">
+              <a
+                href="https://www.linkedin.com/in/anurag-kumar-9a1bb7209/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/Anuragkumar7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/anurag._.kumar._/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://twitter.com/PRONoob86488848"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+            <a
+              class="btn"
+              href="Anurag%20kumar-Java%20Developer-CV.pdf"
+              download
+              >Download CV</a
+            >
+          </div>
+
+          <form name="submit-to-google-sheet" class="contact-form">
+            <label>
+              Name
+              <input type="text" name="Name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
               <input
-                class="fom"
                 type="email"
                 name="Email"
-                placeholder=" Your Email"
+                placeholder="you@email.com"
                 required
               />
+            </label>
+            <label>
+              Message
               <textarea
-                class="fom"
                 name="Massage"
                 rows="6"
-                placeholder=" Your Message"
+                placeholder="How can I help?"
+                required
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
-          </div>
+            </label>
+            <button class="btn" type="submit">Send message</button>
+            <p id="msg" role="status"></p>
+          </form>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Anurag Kumar. Built with care in India.</p>
       </div>
-    </div>
-    <footer class="copyright">
-      <p>
-        Copyright © Anurag. Made with
-        <i class="fa-solid fa-heart"></i>
-        by Anurag kumar
-      </p>
     </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

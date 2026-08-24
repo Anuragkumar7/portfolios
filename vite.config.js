@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { copyFileSync, existsSync } from 'node:fs'
 
 export default defineConfig({
-  base: '/portfolios/',
+  base: process.env.BASE_PATH || '/',
   plugins: [
     react(),
     {

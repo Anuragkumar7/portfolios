@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "homepage": "https://anuragkumar7.github.io/portfolios/",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

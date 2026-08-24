@@ -1,4 +1,7 @@
-export const cvHref = encodeURI('/Anurag Kumar Web-Developer-CV.pdf')
+export const asset = (file) =>
+  `${import.meta.env.BASE_URL}${String(file).replace(/^\//, '')}`
+
+export const cvHref = encodeURI(asset('Anurag Kumar Web-Developer-CV.pdf'))
 
 export const socials = {
   linkedin: 'https://www.linkedin.com/in/anurag-kumar-9a1bb7209/',
@@ -141,7 +144,7 @@ export const projects = [
     title: 'Student Management System',
     category: 'fullstack',
     tag: 'Full stack',
-    image: '/Student-Management-System.png',
+    image: asset('Student-Management-System.png'),
     summary: 'Real-time student administration with role-based access and automated records.',
     details:
       'A web application for managing student records, roles, and day-to-day administration. Built to keep data current and reduce manual work for staff.',
@@ -154,7 +157,7 @@ export const projects = [
     title: 'Attendance Management System',
     category: 'fullstack',
     tag: 'Full stack',
-    image: '/attendance_management-copy-2048x1188.png',
+    image: asset('attendance_management-copy-2048x1188.png'),
     summary: 'Live attendance tracking, role-based permissions, and automated reporting.',
     details:
       'Tracks attendance in real time with permissioned views for staff and students, plus reporting that replaces paper registers.',
@@ -167,7 +170,7 @@ export const projects = [
     title: 'Spotify Dashboard',
     category: 'fullstack',
     tag: 'Full stack',
-    image: '/Spotify.png',
+    image: asset('Spotify.png'),
     summary: 'Personalized music analytics and a live dashboard for listening insights.',
     details:
       'A dashboard for music listening insights with a live preview. Focused on clear metrics and a familiar media-product layout.',
@@ -180,7 +183,7 @@ export const projects = [
     title: 'To-Do List',
     category: 'frontend',
     tag: 'Frontend',
-    image: '/5665422.jpg',
+    image: asset('5665422.jpg'),
     summary: 'Task management with real-time updates, priorities, and a clean daily workflow.',
     details:
       'A lightweight task app for daily planning: add, prioritize, and keep a running list without clutter.',
@@ -193,7 +196,7 @@ export const projects = [
     title: 'Weather App',
     category: 'frontend',
     tag: 'Frontend',
-    image: '/weather.jpg',
+    image: asset('weather.jpg'),
     summary: 'Live conditions and forecasts so people can plan the day with confidence.',
     details:
       'Pulls live weather data into a simple forecast view for quick planning.',
@@ -206,7 +209,7 @@ export const projects = [
     title: 'Drum Kit',
     category: 'frontend',
     tag: 'Frontend',
-    image: '/work-3.png',
+    image: asset('work-3.png'),
     summary: 'A keyboard-driven virtual kit for playing drums in the browser.',
     details:
       'Maps keyboard keys to drum sounds for an immediate, playful audio UI.',
@@ -219,7 +222,7 @@ export const projects = [
     title: 'Simon Game',
     category: 'frontend',
     tag: 'Frontend',
-    image: '/work-4.png',
+    image: asset('work-4.png'),
     summary: 'Classic lights-and-sounds memory game with sequenced pad challenges.',
     details:
       'A browser version of Simon: repeat growing sequences of lights and sounds.',
@@ -232,7 +235,7 @@ export const projects = [
     title: 'Calculator',
     category: 'frontend',
     tag: 'Frontend',
-    image: '/calculator.jpg',
+    image: asset('calculator.jpg'),
     summary: 'Keyboard-first calculator for fast, everyday arithmetic.',
     details:
       'Supports mouse and keyboard input for basic arithmetic in a compact interface.',

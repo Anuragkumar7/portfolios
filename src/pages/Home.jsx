@@ -10,6 +10,7 @@ import {
   services,
   socials,
   tech,
+  asset,
 } from '../data'
 import { useReveal } from '../hooks/useReveal'
 import { useTypewriter } from '../hooks/useTypewriter'
@@ -113,7 +114,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-photo reveal">
               <div className="about-portrait">
-                <img src="/profile.png" alt="Anurag Kumar" />
+                <img src={asset('profile.png')} alt="Anurag Kumar" />
                 <div className="portrait-shade" />
               </div>
               <div className="photo-glow" />

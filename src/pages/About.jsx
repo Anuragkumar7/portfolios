@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { chips, education, experience, skills } from '../data'
+import { asset, chips, education, experience, skills } from '../data'
 import { useReveal } from '../hooks/useReveal'
 
 export default function About() {
@@ -40,7 +40,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-photo reveal">
             <div className="about-portrait">
-              <img src="/profile.png" alt="Anurag Kumar" />
+              <img src={asset('profile.png')} alt="Anurag Kumar" />
               <div className="portrait-shade" />
             </div>
             <div className="photo-glow" />

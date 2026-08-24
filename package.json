@@ -2,6 +2,7 @@
   "name": "anurag-portfolio",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://anuragkumar7.github.io/portfolios/",
   "type": "module",
   "scripts": {
     "dev": "vite",
